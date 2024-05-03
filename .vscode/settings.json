@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "back-end/Servidor_tempo/src",
+        "back-end/Wheater_server/src/main/java/com/mycompany/wheater_server"
+    ]
+}
