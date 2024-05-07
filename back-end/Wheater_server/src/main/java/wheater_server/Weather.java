@@ -13,11 +13,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class Weather {
-    private static final String API_KEY = "89b87aef95d01c01e62919c562637648"; // Sua chave de API
+    private static final String API_KEY = "89b87aef95d01c01e62919c562637648"; // Minha chave de API
 
     public static void main(String[] args) {
-        String cityName = "maputo"; // Substitua pelo nome da cidade desejada
-        JSONArray forecastArray = new JSONArray(); // Array para armazenar todos os objetos de previsão
+        String cityName = "maputo";
+        JSONArray forecastArray = new JSONArray();
 
         try {
             String forecastData = getFiveDayForecast(cityName);
@@ -56,7 +56,7 @@ public class Weather {
     }
 
     private static String getFiveDayForecast(String cityName) throws IOException {
-        // ... (seu código existente para obter os dados da API)
+        //A fazer a requisicao dos dados na API
                 String apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=" + API_KEY;
 
         URL url = new URL(apiUrl);
@@ -75,6 +75,7 @@ public class Weather {
         return response.toString();
     }
 
+    //Metodo para podermos converter a temperatura em Kelvin para Celcius
     private static double kelvinToCelsius(double kelvin) {
         return kelvin - 273.15;
     }
